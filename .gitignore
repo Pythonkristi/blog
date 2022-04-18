@@ -1,3 +1,6 @@
-blog/
+blog/Include
+blog/Lib
+blog/Scripts
+blog/pyvenv.cfg
 _pycache_/
 *sqlite3
