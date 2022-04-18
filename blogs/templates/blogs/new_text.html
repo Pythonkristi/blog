@@ -1,0 +1,23 @@
+{% extends "blogs/base.html" %}
+{% load bootstrap4 %}
+
+{% block page_header %}
+  <p>Добавьте ноую запись</p>
+{% endblock page_header %}
+
+{% block content %}
+  <form method="post" action="{% url 'blogs:new_text' %}" class="form">
+     {% csrf_token %}
+     {% bootstrap_form form %}
+     {% buttons %}
+      <button name="submit" class="btn btn-primary">добавить запись</button>
+     {% endbuttons %}
+     
+     <input type="hidden" name="next"
+       value="{% url 'blogs:index' %}" />
+  </form>
+
+{% endblock content %}
+
+
+
